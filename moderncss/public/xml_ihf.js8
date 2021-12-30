@@ -1,0 +1,19 @@
+var xmlhttp;
+if (window.XMLHttpRequest) { // для IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+}
+else { // для IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET", "xml/author_information.xml", false);
+xmlhttp.overrideMimeType('application/xml');
+xmlhttp.send();
+var xmlDoc = xmlhttp.responseText;
+var parser = new DOMParser();
+var doc = parser.parseFromString(xmlDoc, "application/xml");
+var string = document.getElementById("author");
+var elem = doc.getElementsByTagName("information")
+for (i = 0; i < elem[0].children.length; i++) { string.innerHTML += elem[0].children[i].textContent; }
+
+
+
