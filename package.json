@@ -1,4 +1,5 @@
 {
+  "homepage":"https://DaryaMarmysh.github.io/botanic_garden_website",
   "dependencies": {
     "@themesberg/flowbite": "^1.2.0",
     "tailwind-scrollbar-hide": "^1.1.6",
